@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* height: 50px; */
+    text-align: center;
+}
+
+.footer-text {
+    color: rgb(255, 137, 59);
+
+}
+
+.footer-text:hover {
+    color: whitesmoke;
+}

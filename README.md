@@ -34,8 +34,8 @@
 
 ## site information
 
-* responsive for mobile:  max-width: 768px
-* responsive for Table:  max-width: 540px
+* responsive for mobile:  max-width: 540px
+* responsive for Table:  max-width: 768px
 *
 *
 *

@@ -1,31 +1,29 @@
 import { Carousel } from 'react-bootstrap';
 import './Banner.css'
 
-const Banner = () => {
 
+const Banner = () => {
 
     return (
 
-
-        <div className='d-flex container justify-content-center align-items-center p-3'>
-            <div >
-                <h3 className='text-warning'>Choose best Laptop form</h3>
-                <h2 className='text-'>Laptop warehouse</h2>
+        <div className='d-flex container justify-content-center align-items-center banner p-3'>
+            <div className='title m-5' >
+                <h3>Choose best Laptop form</h3>
+                <h2>Laptop Warehouse</h2>
             </div>
 
 
-            <div className='banner'>
+            <div className='banner-slider'>
 
                 <Carousel fade>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://i.ibb.co/XyFq0Mt/banner-1.jpg"
+                            src="https://i.ibb.co/8btw1sy/banner-1.jpg"
                             alt="First slide"
                         />
-                        <Carousel.Caption className='mb-5'>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <Carousel.Caption className=' bg-dark bg-opacity-50 rounded-pill'>
+                            <h4 className='m-0'>Hp Supper Cool</h4>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -33,13 +31,12 @@ const Banner = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://i.ibb.co/GMHyhqs/banner-2.jpg"
+                            src="https://i.ibb.co/yfYryPv/banner-2.jpg"
                             alt="Second slide"
                         />
 
-                        <Carousel.Caption className='mb-5'>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <Carousel.Caption className=' bg-dark bg-opacity-50 rounded-pill'>
+                            <h4 className='m-0'>Asus ROG G1000</h4>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -48,13 +45,12 @@ const Banner = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://i.ibb.co/RDW5HkM/banner-3.jpg"
+                            src="https://i.ibb.co/F64b1c5/banner-3.jpg"
                             alt="Third slide"
                         />
 
-                        <Carousel.Caption className='mb-5'>
-                            <h3>Shoe's are bring Fashion</h3>
-                            <p>We love what we do! Every design is original made by us or made buy customers design or other designers..</p>
+                        <Carousel.Caption className=' bg-dark bg-opacity-50 rounded-pill'>
+                            <h4 className='m-0'>Microsoft Surface g10</h4>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

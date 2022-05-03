@@ -1,4 +1,49 @@
-.banner {
-    width: 600px;
+.title {
+    color: orangered;
+    font-weight: 600;
+    font-size: 40px;
+}
 
+.title h2 {
+    color: orangered;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+
+.banner-slider {
+    width: 500px;
+}
+
+
+/* ---------- for mobile- -------------- max-width: 768px------ */
+
+@media screen and (max-width: 768px) {
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-slider {
+        width: 90%;
+    }
+}
+
+
+
+/* ---------- for tablet- -------------- max-width: 991px------ */
+
+@media screen and (max-width: 991px) {
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-slider {
+        width: 95%;
+    }
 }

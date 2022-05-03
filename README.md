@@ -29,3 +29,19 @@
 #### Server side
     * npm init
     * express cors mongodb dotenv
+
+
+
+## site information
+
+* responsive for mobile:  max-width: 768px
+* responsive for Table:  max-width: 540px
+*
+*
+*
+*
+*
+*
+*
+*
+

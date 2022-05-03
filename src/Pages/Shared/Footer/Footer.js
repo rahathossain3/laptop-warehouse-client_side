@@ -6,7 +6,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='footer mt-2 justify-content-between p-3 px-5'>
+        <div className='footer justify-content-between p-3 px-5'>
             <div className='d-flex flex-column ps-2'>
                 <a className=' text-decoration-none footer-text ' href="https://www.facebook.com/Rahat.Imon.01/" target='blank'>
                     <i className="fa-brands fa-facebook "></i><span> Facebook</span>

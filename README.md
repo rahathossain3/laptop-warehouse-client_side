@@ -36,9 +36,9 @@
 
 * responsive for mobile:  max-width: 540px
 * responsive for Table:  max-width: 768px
-*
-*
-*
+* 404/Notfound page add
+* Banner add
+* 
 *
 *
 *

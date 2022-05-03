@@ -1,0 +1,18 @@
+.from {
+    padding: 15px;
+    background-image: url(https://i.ibb.co/8myTtsD/jc-gellidon-3uqauuc-Yhj-Q-unsplash.jpg);
+    background-size: cover;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+.entry-from {
+    background-color: rgba(0, 0, 0, 0.562);
+    padding: 25px;
+    width: 50%;
+    border: 4px dotted wheat;
+    border-radius: 30px;
+    border-right-color: lightsalmon;
+    border-bottom-color: rgb(255, 72, 0);
+}

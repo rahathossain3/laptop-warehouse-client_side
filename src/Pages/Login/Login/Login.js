@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Registration from '../Registration/Registration';
+
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
@@ -27,14 +28,21 @@ const Login = () => {
                         Login
                     </Button>
 
-                    <p className='text-center text-warning'>Are you a New User.!?
-                        <button className='btn btn-link text-warning text-decoration-none'>Please Registration  </button>
+                    <p className='text-center mb-3'>
+                        <span className='me-2'>  Are you a New User.?</span>
+                        <Link to='/registration' className='login-link'>Please Registration  </Link>
                     </p>
 
-
                 </Form>
-            </div>
 
+                <div className='text-center' >
+                    <hr />
+                    <h6 className='m-0 p-0'>or</h6>
+                    <hr />
+                </div>
+                <SocialLogin></SocialLogin>
+
+            </div>
         </div>
     );
 };

@@ -20,7 +20,7 @@ const Footer = () => {
 
             </div>
             <div>
-                <p className=' footer-text mx-auto '>copyright <FontAwesomeIcon icon={faCopyright} /> Fashion BD warehouse</p>
+                <p className=' footer-text mx-auto '>copyright <FontAwesomeIcon icon={faCopyright} /> Laptop warehouse</p>
             </div>
 
         </div >

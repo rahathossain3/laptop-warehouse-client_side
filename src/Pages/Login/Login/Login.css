@@ -16,3 +16,17 @@
     border-right-color: lightsalmon;
     border-bottom-color: rgb(255, 72, 0);
 }
+
+.login-link {
+    color: orange;
+    font-size: 17px;
+    text-decoration: none;
+    /* padding: 5px; */
+    /* margin-right: 5px; */
+}
+
+.login-link:hover {
+    color: rgb(255, 238, 0);
+    font-size: 17px;
+
+}

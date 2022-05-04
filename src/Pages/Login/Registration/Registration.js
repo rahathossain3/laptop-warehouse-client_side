@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -15,6 +16,7 @@ const Registration = () => {
     // for set user name
     const [updateProfile] = useUpdateProfile(auth);
 
+
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
@@ -27,7 +29,7 @@ const Registration = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
     // for loading----
@@ -50,12 +52,9 @@ const Registration = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         const displayName = nameRef.current.value;
-        // const setName = user?.auth?.displayName;
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName });
-
-        // console.log(email, password);
 
     }
     console.log(user);

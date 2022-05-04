@@ -5,10 +5,14 @@ import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import auth from '../../../firebase.init';
 import './Header.css'
+import Loading from '../Loading/Loading';
 
 const Header = () => {
-    const [user] = useAuthState(auth)
+    const [user, loading] = useAuthState(auth)
 
+    if (loading) {
+        <Loading></Loading>
+    }
 
     //for sign out
     const handleSignOut = () => {
@@ -32,9 +36,16 @@ const Header = () => {
                         </Nav>
                         <Nav>
 
-                            <Nav.Link as={Link} to="#userProfile">
-                                <span>{user?.displayName}</span>
-                            </Nav.Link>
+                            {user ?
+
+                                <Nav.Link as={Link} to="#userProfile">
+                                    <span>{user?.displayName}</span>
+                                </Nav.Link>
+                                :
+                                <Nav.Link as={Link} to="#userProfile">
+                                    <span>User</span>
+                                </Nav.Link>
+                            }
 
                             {/* if user login  (for working not login) */}
                             {

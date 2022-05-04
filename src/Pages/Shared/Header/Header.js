@@ -32,8 +32,8 @@ const Header = () => {
                         </Nav>
                         <Nav>
 
-                            <Nav.Link as={Link} to="#deets">
-                                <span>{user?._displayName}Md. Rahat Hossain Imon</span>
+                            <Nav.Link as={Link} to="#userProfile">
+                                <span>{user?.displayName}</span>
                             </Nav.Link>
 
                             {/* if user login  (for working not login) */}
@@ -54,8 +54,8 @@ const Header = () => {
 
                                     :
                                     <>
-                                        <Nav.Link as={Link} className="ms-0 px-0" to="/login">Login</Nav.Link>
-                                        <Nav.Link as={Link} to="/registration">/ Registration</Nav.Link>
+                                        <Nav.Link as={Link} className="ms-0 px-0" to="/login">Login  /</Nav.Link>
+                                        <Nav.Link as={Link} to="/registration">Registration</Nav.Link>
                                     </>
                             }
 

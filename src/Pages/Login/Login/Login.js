@@ -48,7 +48,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         signInWithEmailAndPassword(email, password);
-        console.log(email, password);
+        // console.log(email, password);
     }
 
 

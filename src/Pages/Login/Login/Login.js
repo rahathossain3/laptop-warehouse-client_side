@@ -37,7 +37,7 @@ const Login = () => {
 
                 <div className='text-center' >
                     <hr />
-                    <h6 className='m-0 p-0'>or</h6>
+                    <h6 className='m-0 p-0'>Or</h6>
                     <hr />
                 </div>
                 <SocialLogin></SocialLogin>

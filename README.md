@@ -38,8 +38,8 @@
 * responsive for Table:  max-width: 768px
 * 404/Notfound page add
 * Banner add
-* 
-*
+* login add
+* social login
 *
 *
 *

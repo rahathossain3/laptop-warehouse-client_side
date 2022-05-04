@@ -16,6 +16,8 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
+    let errorMessage;
+
     // sign in user from user and password
     const [
         signInWithEmailAndPassword,
@@ -37,9 +39,7 @@ const Login = () => {
 
 
     if (error) {
-
-        // console.log(error.message.split('/')[1].split(')')[0]);
-        alert(error?.message?.split('/')[1]?.split(')')[0]);
+        errorMessage = alert(error?.message?.split('/')[1]?.split(')')[0]);
     }
 
     // for sign in
@@ -76,13 +76,14 @@ const Login = () => {
                         Login
                     </Button>
 
-
                     <p className='text-center mb-3'>
                         <span className='me-2'>  Are you a New User.?</span>
                         <Link to='/registration' className='login-link'>Please Registration  </Link>
                     </p>
 
                 </Form>
+                {/* error message  */}
+                {errorMessage}
 
                 <div className='text-center' >
                     <hr />

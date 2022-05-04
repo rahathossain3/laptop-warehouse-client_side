@@ -38,7 +38,7 @@ const Header = () => {
 
                             {/* if user login  (for working not login) */}
                             {
-                                !user ?
+                                user ?
                                     <>
                                         <NavDropdown title="Manage product" id="collasible-nav-dropdown">
                                             <NavDropdown.Item href="#action/3.1">Manage Items</NavDropdown.Item>
@@ -53,7 +53,10 @@ const Header = () => {
 
 
                                     :
-                                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                    <>
+                                        <Nav.Link as={Link} className="ms-0 px-0" to="/login">Login</Nav.Link>
+                                        <Nav.Link as={Link} to="/registration">/ Registration</Nav.Link>
+                                    </>
                             }
 
 

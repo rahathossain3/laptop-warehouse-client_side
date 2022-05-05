@@ -1,7 +1,5 @@
 .blogs-bg {
     background-image: url(https://i.ibb.co/bRhvFwq/bloge-bg.jpg);
-
-
 }
 
 .blogs {
@@ -19,14 +17,16 @@
     padding-left: 20px;
 }
 
-.blogs li {
+.blogs li,
+.blogs p {
     font-weight: 500;
+    text-align: justify;
 }
 
 .blogs .border-contain {
     padding: 20px;
     border-radius: 30px;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.911);
     box-shadow: 1px 2px 5px rgba(218, 165, 32, 0.493);
 }
 
@@ -41,8 +41,12 @@
 
     .blogs-bg {
         background-image: url(https://i.ibb.co/VjWVFpP/New-Project-1.jpg);
-
         background-size: cover;
+    }
+
+    .blogs {
+        text-align: left;
+        padding: 8px;
     }
 
     .answer-part {

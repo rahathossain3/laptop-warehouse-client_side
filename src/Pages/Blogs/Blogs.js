@@ -17,7 +17,7 @@ const Blogs = () => {
                             </div>
                             <div>
                                 <span className='blogs-title'>
-                                    Difference between javascript and nodejs.
+                                    Difference between javascript and nodejs?
                                 </span>
                             </div>
                         </h1>
@@ -26,18 +26,18 @@ const Blogs = () => {
                             <div className='answer-part'>
                                 <ul>
 
-                                    <h3 className='text-decoration-underline'> Authentication</h3>
-                                    <li>Authentication verifies who the user.</li>
-                                    <li> Authentication works through passwords, one-time pins, other information provided or entered by the user. </li>
-                                    <li>  Authentication is visible to and partially changeable by the user.</li>
+                                    <h3 className='text-decoration-underline'> javascript</h3>
+                                    <li>Javascript is a programming language that  used for writing scripts on the website.</li>
+                                    <li> Javascript can run in any browser engine. </li>
+                                    <li>  Some of the javascript frameworks are Reactjs.</li>
                                 </ul>
                             </div>
                             <div className='answer-part'>
                                 <ul>
-                                    <h3 className=' text-decoration-underline'> Authorization</h3>
-                                    <li>Authorization declare what resources a user can access.</li>
-                                    <li> Authorization works through settings that are implemented and maintained by the System. </li>
-                                    <li>  Authorization changeable by the user..</li>
+                                    <h3 className=' text-decoration-underline'> nodejs</h3>
+                                    <li>NodeJS is a Javascript runtime environment.</li>
+                                    <li> V8 is the Javascript engine inside of node.js . </li>
+                                    <li>  Some of the Nodejs modules are express etc.</li>
                                 </ul>
                             </div>
                         </div>
@@ -45,33 +45,76 @@ const Blogs = () => {
                     </div>
 
                     {/* qus 2----------------- */}
+
                     <div className=' mb-3 mt-3 border-contain'>
-                        <h1 >
-                            <samp className=' text-primary'>Qus 2:</samp>
-                            <span className='blogs-title'>
-                                Why are you using firebase? What other options do you have to implement authentication?
-                            </span>
+                        <h1 className='d-flex'>
+                            <div>
+                                <samp className=' text-primary'>Qus 2:</samp>
+                            </div>
+                            <div>
+                                <span className='blogs-title'>
+                                    When should you use nodejs and when should you use mongodb?
+                                </span>
+                            </div>
                         </h1>
+                        <h3 className=' text-primary mb-3 mt-3'>Ans:</h3>
+                        <div className='d-flex answer'>
+                            <div className='answer-part'>
+                                <ul>
 
-                        <ul>
-                            <h3 className=' text-primary mb-3 mt-3'>Ans: </h3>
-                            <h3 className='text-decoration-underline'> Firebase using for</h3>
+                                    <h3 className='text-decoration-underline'> Use nodejs</h3>
+                                    <p> Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.</p>
 
-                            <h5>
-                                Firebase provides easy-to-use SDKs, hosting, database managemen, ready-made UI libraries to authenticate users etc  to my app.
-                            </h5>
-
-                            <h3 className='text-decoration-underline'> Some Firebase options are</h3>
-                            <li> Authentication.</li>
-                            <li> Cloud Firestore.</li>
-                            <li> Extensions.</li>
-                            <li> Hosting. etc</li>
-
-                        </ul>
+                                </ul>
+                            </div>
+                            <div className='answer-part'>
+                                <ul>
+                                    <h3 className=' text-decoration-underline'> Use mongodb</h3>
+                                    <p> SQL. NoSQL databases like MongoDB are a good choice when your data is document-centric and doesn't fit well into the schema of a relational database, when you need to accommodate massive scale, when you are rapidly prototyping, and a few other use cases.</p>
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
 
+
                     {/* qus 3----------------- */}
+
+                    <div className=' mb-3 mt-3 border-contain'>
+                        <h1 className='d-flex'>
+                            <div>
+                                <samp className=' text-primary'>Qus 3:</samp>
+                            </div>
+                            <div>
+                                <span className='blogs-title'>
+                                    Differences between sql and nosql databases?
+                                </span>
+                            </div>
+                        </h1>
+                        <h3 className=' text-primary mb-3 mt-3'>Ans:</h3>
+                        <div className='d-flex answer'>
+                            <div className='answer-part'>
+                                <ul>
+
+                                    <h3 className='text-decoration-underline'> sql</h3>
+                                    <li>RELATIONAL Database Management System (RDBMS).</li>
+                                    <li> These databases are best for complex queries.</li>
+                                    <li> Vertically Scalable.</li>
+                                </ul>
+                            </div>
+                            <div className='answer-part'>
+                                <ul>
+                                    <h3 className=' text-decoration-underline'> nosql</h3>
+                                    <li>Non-relational database system.</li>
+                                    <li> These databases are not good for complex queries. </li>
+                                    <li> Horizontally scalable.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                     <div className=' mb-3 mt-3 border-contain'>
                         <h1 >
                             <samp className=' text-primary'>Qus 3:</samp>

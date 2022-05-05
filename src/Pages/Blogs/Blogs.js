@@ -7,6 +7,7 @@ const Blogs = () => {
             <div className=' p-4 text-center'>
                 <h1>Questions Answer </h1>
                 <hr />
+
                 <div className='blogs'>
 
                     {/* qus 1----------------- */}

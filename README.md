@@ -36,11 +36,11 @@
 
 * responsive for mobile:  max-width: 540px
 * responsive for Table:  max-width: 768px
-* 404/Notfound page add
+* 404/ Notfound page add
 * Banner add
-* login add
+* login & registration add
 * social login
-* email password authentication, google signin
+* email password authentication, google sign in, reset password
 *
 *
 *

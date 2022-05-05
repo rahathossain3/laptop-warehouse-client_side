@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container className=' text-white'>
+                <Container className='text-white'>
                     <Navbar.Brand as={Link} to="/home" >
                         <span className='site-title' id=""> Laptop <small>Warehouse</small></span>
 
@@ -30,34 +30,27 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/items">Items</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link as={Link} to="/items" className='header-links'>Items</Nav.Link>
+                            <Nav.Link href="#pricing" className='header-links'>Pricing</Nav.Link>
 
                         </Nav>
                         <Nav>
-
-                            {user ?
-
-                                <Nav.Link as={Link} to="#userProfile">
-                                    <span>{user?.displayName}</span>
-                                </Nav.Link>
-                                :
-                                <Nav.Link as={Link} to="#userProfile">
-                                    <span>User</span>
-                                </Nav.Link>
-                            }
 
                             {/* if user login  (for working not login) */}
                             {
                                 user ?
                                     <>
                                         <NavDropdown title="Manage product" id="collasible-nav-dropdown">
-                                            <NavDropdown.Item href="#action/3.1">Manage Items</NavDropdown.Item>
+                                            <NavDropdown.Item href="#action/3.1" >Manage Items</NavDropdown.Item>
                                             <NavDropdown.Item href="#action/3.2">Add Item</NavDropdown.Item>
 
                                             <NavDropdown.Divider />
                                             <NavDropdown.Item href="#action/3.4">My Items</NavDropdown.Item>
                                         </NavDropdown>
+
+                                        <Nav.Link as={Link} to="#userProfile" className='header-links'>
+                                            <span>{user?.displayName}</span>
+                                        </Nav.Link>
 
                                         <button className='btn btn-dark text-warning ' onClick={handleSignOut}>Sign Out</button>
                                     </>

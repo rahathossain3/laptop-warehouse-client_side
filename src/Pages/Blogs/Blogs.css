@@ -1,0 +1,76 @@
+.blogs-bg {
+    background-image: url(https://i.ibb.co/bRhvFwq/bloge-bg.jpg);
+
+
+}
+
+.blogs {
+    text-align: left;
+    padding: 20px;
+}
+
+.blogs-title {
+    color: orangered;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    padding-bottom: 10px;
+}
+
+.blogs h5 {
+    padding-left: 20px;
+}
+
+.blogs li {
+    font-weight: 500;
+}
+
+.blogs .border-contain {
+    padding: 20px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    box-shadow: 1px 2px 5px rgba(218, 165, 32, 0.493);
+}
+
+.answer-part {
+    width: 50%;
+}
+
+
+/* ---------- for mobile- -------------- max-width: 768px------ */
+
+@media screen and (max-width: 768px) {
+
+    .blogs-bg {
+        background-image: url(https://i.ibb.co/VjWVFpP/New-Project-1.jpg);
+
+        background-size: cover;
+    }
+
+    .answer-part {
+        width: 100%;
+    }
+
+    .answer {
+        flex-direction: column;
+    }
+}
+
+
+
+/* ---------- for tablet- -------------- max-width: 991px------ */
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .blogs-bg {
+        background-image: url(https://i.ibb.co/VjWVFpP/New-Project-1.jpg);
+
+        background-size: cover;
+    }
+
+    .answer-part {
+        width: 100%;
+    }
+
+    .answer {
+        flex-direction: column;
+    }
+}

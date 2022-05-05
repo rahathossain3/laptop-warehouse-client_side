@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetails from '../ItemDetails/ItemDetails';
 
-const Items = () => {
+const ManageItems = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -18,4 +18,4 @@ const Items = () => {
     );
 };
 
-export default Items;
+export default ManageItems;

@@ -15,6 +15,14 @@
     border-bottom-color: rgb(255, 72, 0);
 }
 
+.login-btn {
+    width: 25%;
+}
+
+.reset {
+    cursor: pointer;
+}
+
 .login-link {
     color: orange;
     font-size: 17px;
@@ -37,6 +45,15 @@
     .entry-from {
         padding: 25px;
         width: 90%;
+    }
+
+    .login-btn {
+        width: 50%;
+    }
+
+    .login-link {
+        display: flex;
+        flex-direction: column;
     }
 
 }

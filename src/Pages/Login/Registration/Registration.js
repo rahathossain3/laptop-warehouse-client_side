@@ -84,7 +84,7 @@ const Registration = () => {
                     </Form.Group>
 
 
-                    <Button className='w-25 mb-3' variant="primary" type="login">
+                    <Button className='login-btn mb-3' variant="primary" type="login">
                         Registration
                     </Button>
 

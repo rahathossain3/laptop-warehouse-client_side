@@ -40,7 +40,7 @@
 * Banner add
 * login add
 * social login
-*
+* email password authentication, google signin
 *
 *
 *

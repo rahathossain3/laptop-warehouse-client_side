@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -26,10 +28,17 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    // for reset password
+    const [
+        sendPasswordResetEmail,
+        sending
+    ] = useSendPasswordResetEmail(auth);
+
+
 
 
     // for loading----
-    if (loading) {
+    if (loading || sending) {
         <Loading></Loading>
     }
 
@@ -51,6 +60,18 @@ const Login = () => {
         // console.log(email, password);
     }
 
+    // for password send
+
+    const handlePassReset = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Send Reset Link');
+        }
+        else {
+            toast('Please enter Your Email')
+        }
+    }
 
 
     return (
@@ -66,13 +87,16 @@ const Login = () => {
 
                     </Form.Group>
 
-                    <Form.Group className="mb-4" controlId="formBasicPassword">
+                    <Form.Group className="mb-2" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control ref={passRef} type="password" placeholder="Password" required />
                     </Form.Group>
 
+                    <p onClick={handlePassReset} style={{ margin: '10px' }} className='bg-dark bg-opacity-50 rounded-pill'>
+                        <span className='mx-2 login-link reset'> Forgat Password  </span>
+                    </p>
 
-                    <Button className='w-25 mb-3' variant="primary" type="login">
+                    <Button className='mb-3 login-btn' variant="primary" type="login">
                         Login
                     </Button>
 
@@ -91,6 +115,7 @@ const Login = () => {
                     <hr />
                 </div>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
 
             </div>
         </div>

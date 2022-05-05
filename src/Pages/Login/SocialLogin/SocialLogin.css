@@ -2,6 +2,7 @@
     font-size: 20px;
     font-weight: 600;
     padding: 5px;
+    width: 50%;
     color: orange;
     border: 1px solid goldenrod;
     border-radius: 10px;
@@ -16,4 +17,34 @@
 
 .social-btn:hover .social-icon {
     color: greenyellow;
+}
+
+
+/* ---------- for mobile- -------------- max-width: 768px------ */
+
+@media screen and (max-width: 768px) {
+
+    .social-btn {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+
+/* ---------- for tablet- -------------- max-width: 991px------ */
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .entry-from {
+        padding: 25px;
+        width: 70%;
+    }
+
+    .social-btn {
+        width: 75%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }

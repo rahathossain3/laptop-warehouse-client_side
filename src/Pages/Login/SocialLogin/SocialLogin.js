@@ -32,7 +32,7 @@ const SocialLogin = () => {
             <span className=' text-center text-capitalize  text-info'>  {errorMessage}</span>
             <br />
             <div className='d-flex mx-auto'>
-                <button onClick={() => signInWithGoogle()} className='w-50 mx-auto social-btn'> <i className="fab fa-google social-icon" ></i> Google Sign In</button>
+                <button onClick={() => signInWithGoogle()} className=' mx-auto social-btn'> <i className="fab fa-google social-icon" ></i> Google Sign In</button>
             </div>
 
         </div>

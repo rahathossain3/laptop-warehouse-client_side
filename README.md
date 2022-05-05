@@ -41,6 +41,10 @@
 * login & registration add
 * social login
 * email password authentication, google sign in, reset password
+* Blogs add with 3 qus ans
+*
+*
+*
 *
 *
 *

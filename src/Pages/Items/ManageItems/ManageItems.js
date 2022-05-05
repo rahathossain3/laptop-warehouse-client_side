@@ -9,12 +9,26 @@ const ManageItems = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+    // console.log(products);
 
     return (
         <div>
             <h1>This is items: {products.length}</h1>
-            <ItemDetails></ItemDetails>
-        </div>
+
+
+            <div className='d-flex'>
+
+                {
+                    products.map(product => <ItemDetails
+                        key={product._id}
+                        product={product}
+                    >
+                    </ItemDetails>
+                    )
+                }
+            </div>
+
+        </div >
     );
 };
 

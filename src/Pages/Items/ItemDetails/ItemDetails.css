@@ -33,9 +33,13 @@
 }
 
 .item-details {
-
     text-align: justify;
 }
+
+.item-tag {
+    font-weight: 700;
+}
+
 
 /* 
 .item-price {

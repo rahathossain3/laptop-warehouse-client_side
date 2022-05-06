@@ -5,6 +5,16 @@ import './ItemDetails.css'
 const ItemDetails = ({ product }) => {
     const { _id, img, name, details, price, brandName, supplierName, quantity } = product;
 
+    // for quantity
+    let finalQuantity;
+    if (quantity <= 0) {
+        finalQuantity = <span className='item-tag text-danger'>Sold Out</span>
+    }
+    else {
+        finalQuantity = <span className='item-tag text-success'>{quantity}</span>
+    }
+
+
 
     return (
 
@@ -19,16 +29,29 @@ const ItemDetails = ({ product }) => {
                         }
                     </Card.Text>
                     <ListGroup className="list-group-flush mt-0">
-                        <ListGroupItem>Price: {price}</ListGroupItem>
-                        <ListGroupItem>Brand Name: {brandName}</ListGroupItem>
-                        <ListGroupItem>Supplier Name: {supplierName} </ListGroupItem>
-                        <ListGroupItem>Available Quantity: {quantity}</ListGroupItem>
+                        <ListGroupItem>
+                            <span className='item-tag'>Price: </span>
+                            <span className='item-tag text-success'>{price} $</span>
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <span className='item-tag'>Brand Name: </span>
+                            <span className='item-tag text-success'>{brandName}</span>
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <span className='item-tag'>Supplier Name: </span>
+                            <span className='item-tag text-success'>{supplierName}</span>
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <span className='item-tag'>Available Quantity: </span>
+                            {finalQuantity}
+                        </ListGroupItem>
 
                     </ListGroup>
 
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <button>Delivery</button>
+                    <button>another button </button>
                 </Card.Footer>
             </Card >
         </CardGroup >

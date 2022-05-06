@@ -17,7 +17,7 @@
         "price": 360,
         "brandName": "HP",
         "supplierName": "supplier Name",
-        "quantity": 38
+        "quantity": -1
     },
     {
         "_id": "62728cb551543737ad87a6c6",

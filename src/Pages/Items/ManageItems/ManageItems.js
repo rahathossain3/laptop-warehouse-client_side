@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetails from '../ItemDetails/ItemDetails';
+import './ManageItems.css'
 
 const ManageItems = () => {
     const [products, setProducts] = useState([]);
@@ -16,7 +17,7 @@ const ManageItems = () => {
             <h1>This is items: {products.length}</h1>
 
 
-            <div className='d-flex'>
+            <div className='item-cart'>
 
                 {
                     products.map(product => <ItemDetails

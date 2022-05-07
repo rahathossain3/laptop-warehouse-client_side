@@ -13,8 +13,9 @@ const ManageItems = () => {
     // console.log(products);
 
     return (
-        <div>
-            <h1>This is items: {products.length}</h1>
+        <div className='container text-center pt-4'>
+            <h1 className='title '>Manage Warehouse Items</h1>
+            <hr />
 
 
             <div className='item-cart'>
@@ -23,6 +24,7 @@ const ManageItems = () => {
                     products.map(product => <ItemDetails
                         key={product._id}
                         product={product}
+                        editItem={true}
                     >
                     </ItemDetails>
                     )

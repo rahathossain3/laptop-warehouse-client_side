@@ -3,7 +3,7 @@ import { Button, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstr
 import './ItemDetails.css'
 
 const ItemDetails = ({ product, editItem }) => {
-    const { _id, img, name, details, price, brandName, supplierName, quantity } = product;
+    const { _id, img, name, details, price, brandName, supplierName, email, quantity } = product;
 
     // for quantity
     let finalQuantity;
@@ -41,19 +41,23 @@ const ItemDetails = ({ product, editItem }) => {
                         }
                     </Card.Text>
                     <ListGroup className="list-group-flush mt-0 ">
-                        <ListGroupItem>
+                        <ListGroupItem className='pt-0'>
                             <span className='item-tag'>Price: </span>
                             <span className='item-tag text-success'>{price} $</span>
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className='pt-0'>
                             <span className='item-tag'>Brand Name: </span>
                             <span className='item-tag text-success'>{brandName}</span>
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className='pt-0'>
                             <span className='item-tag'>Supplier Name: </span>
                             <span className='item-tag text-success'>{supplierName}</span>
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className='pt-0'>
+                            <span className='item-tag'>Supplier Email: </span>
+                            <span className='item-tag text-success'>{email}</span>
+                        </ListGroupItem>
+                        <ListGroupItem className='pt-0 pb-1'>
                             <span className='item-tag'>Available Quantity: </span>
                             {finalQuantity}
                         </ListGroupItem>

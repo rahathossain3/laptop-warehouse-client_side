@@ -1,9 +1,12 @@
 import React from 'react';
-import { Button, Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './ItemDetails.css'
 
 const ItemDetails = ({ product, editItem }) => {
     const { _id, img, name, details, price, brandName, supplierName, email, quantity } = product;
+
+    let navigate = useNavigate();
 
     // for quantity
     let finalQuantity;
@@ -14,10 +17,19 @@ const ItemDetails = ({ product, editItem }) => {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>
     }
 
+    // for update stock
+    const handleRestockedItems = (id) => {
+        console.log(id);
+        navigate(`/restockedItem/${id}`);
+    }
+
+
+
+
     //for button option
     let itemsButtons
     if (!editItem) {
-        itemsButtons = <button className='btn btn-success'>Stock Update</button>
+        itemsButtons = <button onClick={() => handleRestockedItems(_id)} className='btn btn-success'>Stock Update</button>
     }
     else {
         itemsButtons = < >

@@ -4,6 +4,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Banner from './Pages/Home/Banner/Banner';
 import Home from './Pages/Home/Home/Home';
 import ManageItems from './Pages/Items/ManageItems/ManageItems';
+import RestockedItem from './Pages/Items/RestokeItem/RestockedItem';
 import Login from './Pages/Login/Login/Login';
 import Registration from './Pages/Login/Registration/Registration';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -23,6 +24,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/manageitems' element={<ManageItems></ManageItems>}></Route>
+        <Route path='/restockedItem/:id' element={<RestockedItem></RestockedItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
 

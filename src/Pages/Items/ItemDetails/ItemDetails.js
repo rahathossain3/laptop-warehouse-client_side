@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './ItemDetails.css'
 
 const ItemDetails = ({ product, editItem }) => {
+    //destructure product
     const { _id, img, name, details, price, brandName, supplierName, email, quantity } = product;
 
     let navigate = useNavigate();

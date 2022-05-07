@@ -42,8 +42,10 @@
 * social login
 * email password authentication, google sign in, reset password
 * Blogs add with 3 qus ans
-*
-*
+* items show
+* items details show
+* individual item route
+* mongodb data server
 *
 *
 *

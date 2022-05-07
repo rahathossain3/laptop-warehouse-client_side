@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import useItems from '../../../hooks/useItems';
 import ItemDetails from '../ItemDetails/ItemDetails';
 import './ManageItems.css'
 
 const ManageItems = () => {
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [products, setProducts] = useItems([]);
+
+
     // console.log(products);
 
     return (

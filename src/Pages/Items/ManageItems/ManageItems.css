@@ -4,3 +4,27 @@
     grid-gap: 20px;
     padding: 25px;
 }
+
+
+/* ---------- for mobile- -------------- max-width: 768px------ */
+
+@media screen and (max-width: 768px) {
+
+    .item-cart {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+
+
+/* ---------- for tablet- -------------- max-width: 991px------ */
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .item-cart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

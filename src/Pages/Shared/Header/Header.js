@@ -44,6 +44,7 @@ const Header = () => {
 
                             <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
                             <Nav.Link as={Link} to="/addanitem" className='header-links'>Add Item</Nav.Link>
+                            <Nav.Link as={Link} to="/myitems" className='header-links'>My Items</Nav.Link>
 
 
                             <Nav.Link as={Link} to="/blogs" className='header-links'>Blogs</Nav.Link>

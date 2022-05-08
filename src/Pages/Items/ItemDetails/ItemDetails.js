@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useItems from '../../../hooks/useItems';
 import './ItemDetails.css'
 
@@ -47,6 +49,8 @@ const ItemDetails = ({ product, editItem }) => {
 
                     const remaining = products.filter(product => product._id !== id);
                     setProducts(remaining);
+
+                    toast('Item Delete successfully')
                 })
         }
     }
@@ -114,7 +118,9 @@ const ItemDetails = ({ product, editItem }) => {
                     {itemsButtons}
                 </Card.Footer>
             </Card >
+            <ToastContainer />
         </CardGroup >
+
 
 
         // {/* <h2>{_id}</h2>

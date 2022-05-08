@@ -1,8 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddItem = () => {
+
     const { register, handleSubmit } = useForm();
+
+
     const onSubmit = data => {
         console.log(data);
         const url = `http://localhost:5000/item`;
@@ -14,7 +19,10 @@ const AddItem = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result))
+            .then(result => {
+                toast('Item Add successfully');
+
+            })
     };
 
     //const { img, name, details, price, brandName, supplierName, email, quantity } = product;
@@ -24,7 +32,7 @@ const AddItem = () => {
             <h2>Add an Item</h2>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2 ' placeholder='Item Name' {...register("name", { required: true, maxLength: 30 })} />
+                <input value={val} className='mb-2 ' placeholder='Item Name' {...register("name", { required: true, maxLength: 30 })} />
 
                 <textarea className='mb-2 ' placeholder='Item Details' {...register("details", { required: true })} />
 
@@ -41,8 +49,9 @@ const AddItem = () => {
                 <input className='mb-2 ' placeholder='Photo URL' type="Text" {...register("img", { required: true })} />
 
                 <input type='submit' value="Add service" />
-            </form>
 
+            </form>
+            <ToastContainer />
         </div>
     );
 };

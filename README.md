@@ -46,7 +46,7 @@
 * items details show
 * individual item route
 * mongodb data server
-*
+* axios & react-from using
 *
 *
 *

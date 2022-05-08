@@ -24,17 +24,16 @@ const ItemDetails = ({ product, editItem }) => {
 
     // for update stock page
     const handleRestockedItems = (id) => {
-        console.log(id);
+        // console.log(id);
         navigate(`/restockedItem/${id}`);
     }
 
 
     //handle delete------------
-
     const handleItemDelete = id => {
         // console.log(id);
 
-        const proceed = window.confirm('Are you sure?');
+        const proceed = window.confirm(`Do you want delete ${name}  this Item?`);
 
         if (proceed) {
             const url = `http://localhost:5000/item/${id}`;
@@ -50,9 +49,14 @@ const ItemDetails = ({ product, editItem }) => {
                     setProducts(remaining);
                 })
         }
-
     }
 
+    //handle edit item
+
+    const handleEditItems = (id) => {
+        // console.log(id);
+        navigate(`/editItem/${id}`);
+    }
 
 
     //for button option
@@ -62,7 +66,7 @@ const ItemDetails = ({ product, editItem }) => {
     }
     else {
         itemsButtons = < >
-            <button className='btn btn-success me-4'>Edit item</button>
+            <button onClick={() => handleEditItems(_id)} className='btn btn-success me-4'>Edit item</button>
             <button onClick={() => handleItemDelete(_id)} className='btn btn-danger'>Delete Item </button>
         </>
     }

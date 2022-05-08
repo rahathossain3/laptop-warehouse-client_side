@@ -30,7 +30,22 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
+
+                            {/* when have user */}
+                            {/*  {user ?
+                                <>
+                                    <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/addanitem" className='header-links'>Add Item</Nav.Link>
+
+                                </>
+                                :
+                                <></>
+                            } */}
+
                             <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
+                            <Nav.Link as={Link} to="/addanitem" className='header-links'>Add Item</Nav.Link>
+
+
                             <Nav.Link as={Link} to="/blogs" className='header-links'>Blogs</Nav.Link>
 
                         </Nav>
@@ -58,8 +73,9 @@ const Header = () => {
 
                                     :
                                     <>
-                                        <Nav.Link as={Link} className="ms-0 px-0" to="/login">Login  /</Nav.Link>
-                                        <Nav.Link as={Link} to="/registration">Registration</Nav.Link>
+                                        <Nav.Link as={Link} className=" header-links ms-0 px-0" to="/login">Login  </Nav.Link>
+
+                                        <Nav.Link as={Link} className='header-links' to="/registration">Registration</Nav.Link>
                                     </>
                             }
 

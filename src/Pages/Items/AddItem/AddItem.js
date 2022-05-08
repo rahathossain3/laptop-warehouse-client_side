@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddItem.css'
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,24 +30,34 @@ const AddItem = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Add an Item</h2>
+            <h2 className='title text-center mt-3'>Add Item in Laptop Warehouse</h2>
+            <hr style={{ color: 'goldenrod', border: '2px solid goldenrod' }} />
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input value={val} className='mb-2 ' placeholder='Item Name' {...register("name", { required: true, maxLength: 30 })} />
 
-                <textarea className='mb-2 ' placeholder='Item Details' {...register("details", { required: true })} />
+                <label className='field-name' for="name">Item Name</label>
+                <input className='mb-2 ' id='name' placeholder='Item Name' {...register("name", { required: true, maxLength: 30 })} />
 
-                <input className='mb-2 ' placeholder=' Item Price $' type="number" {...register("price", { required: true })} />
+                <label className='field-name' for="details">Item Details</label>
+                <textarea className='mb-2 ' id='details' placeholder='Item Details' {...register("details", { required: true })} />
 
-                <input className='mb-2 ' placeholder='Item Brand Name' {...register("brandName", { required: true })} />
+                <label className='field-name' for="price">Item Price</label>
+                <input className='mb-2 ' id='price' placeholder=' Item Price $' type="number" {...register("price", { required: true })} />
 
-                <input className='mb-2 ' placeholder='Supplier Name' {...register("supplierName", { required: true })} />
+                <label className='field-name' for="brandName">Item Brand Name</label>
+                <input className='mb-2 ' id='brandName' placeholder='Item Brand Name' {...register("brandName", { required: true })} />
 
-                <input className='mb-2 ' placeholder='Item Quantity' type="number" {...register("quantity", { required: true })} />
+                <label className='field-name' for="supplierName">Supplier Name</label>
+                <input className='mb-2 ' id='supplierName' placeholder='Supplier Name' {...register("supplierName", { required: true })} />
 
-                <input className='mb-2 ' placeholder='Supplier Email' type="email" {...register("email", { required: true })} />
+                <label className='field-name' for="quantity">Item Quantity</label>
+                <input className='mb-2 ' id='quantity' placeholder='Item Quantity' type="number" {...register("quantity", { required: true })} />
 
-                <input className='mb-2 ' placeholder='Photo URL' type="Text" {...register("img", { required: true })} />
+                <label className='field-name' for="email">Supplier Email</label>
+                <input className='mb-2 ' id='email' placeholder='Supplier Email' type="email" {...register("email", { required: true })} />
+
+                <label className='field-name' for="img">Item Image</label>
+                <input className='mb-2 ' id='img' placeholder='Item Photo URL' type="Text" {...register("img", { required: true })} />
 
                 <input type='submit' value="Add service" />
 

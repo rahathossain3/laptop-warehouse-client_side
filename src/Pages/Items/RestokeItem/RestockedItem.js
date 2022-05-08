@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ListGroupItem } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useItemDetail from '../../../hooks/useItemDetails';
 import './RestockedItem.css';
 
 const RestockedItem = () => {
+    // const reStockInput = useRef()
+
     const { itemId } = useParams();
     // get single product
     const [product] = useItemDetail(itemId);
@@ -20,6 +22,16 @@ const RestockedItem = () => {
     else {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>
     }
+
+
+
+    // // for re-stock
+    // const handleRestockedItems = event => {
+
+    //     const reStockQuantity = event.target.restock.value;
+    //     console.log(reStockQuantity);
+
+    // }
 
 
     return (
@@ -61,7 +73,13 @@ const RestockedItem = () => {
                     </div>
                     <div className='stock-btn  text-center px-5 mt-5'>
                         <button className='btn btn-warning me-2 m-2 rounded-2 delivery'>Delivery</button>
-                        <button className='btn btn-success me-2 m-2 rounded-2 re-stock'>Re Stock</button>
+
+                        <>
+
+                            <button className='btn btn-success me-2 m-2 rounded-2 re-stock'>Re Stock</button>
+                            <input type="text" name="restock" id="" placeholder='Re-Stock Quantity' />
+
+                        </>
                     </div>
                 </div>
             </div>

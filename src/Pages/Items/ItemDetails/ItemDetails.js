@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './ItemDetails.css'
 
 const ItemDetails = ({ product, editItem }) => {
+
     //destructure product
     const { _id, img, name, details, price, brandName, supplierName, email, quantity } = product;
 
@@ -18,12 +19,32 @@ const ItemDetails = ({ product, editItem }) => {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>
     }
 
-    // for update stock
+    // for update stock page
     const handleRestockedItems = (id) => {
         console.log(id);
         navigate(`/restockedItem/${id}`);
     }
 
+
+    /* //handle delete
+    //gn-car manage service
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+
+        if (proceed) {
+            const url = `https://shielded-forest-30864.herokuapp.com/service/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = services.filter(service => service._id !== id);
+                    setServices(remaining);
+                })
+        }
+
+    } */
 
 
 

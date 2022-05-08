@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
-import { ListGroupItem } from 'react-bootstrap';
+import React, { useRef, useState } from 'react';
+import { Button, FormControl, InputGroup, ListGroupItem } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useItemDetail from '../../../hooks/useItemDetails';
 import './RestockedItem.css';
 
 const RestockedItem = () => {
-    // const reStockInput = useRef()
+    const [restock, setRestock] = useState('');
 
     const { itemId } = useParams();
     // get single product
@@ -23,15 +23,19 @@ const RestockedItem = () => {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>
     }
 
+    //handle restock input
+    const handleRestock = event => {
+        setRestock(event.target.value);
+        // console.log('re', restock);
+    }
 
+    // for re-stock
+    const handleRestockedItems = event => {
+        // const restock = '';
+        // const reStockQuantity = ;
+        console.log(restock);
 
-    // // for re-stock
-    // const handleRestockedItems = event => {
-
-    //     const reStockQuantity = event.target.restock.value;
-    //     console.log(reStockQuantity);
-
-    // }
+    }
 
 
     return (
@@ -76,14 +80,15 @@ const RestockedItem = () => {
 
                         <>
 
-                            <button className='btn btn-success me-2 m-2 rounded-2 re-stock'>Re Stock</button>
-                            <input type="text" name="restock" id="" placeholder='Re-Stock Quantity' />
+
+                            <button onClick={handleRestockedItems} className='btn btn-success me-2 m-2 rounded-2 re-stock'>Re Stock</button>
+                            <input onChange={handleRestock} type="text" name="restock" id="" placeholder='Re-Stock Quantity' />
 
                         </>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

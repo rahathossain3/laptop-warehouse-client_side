@@ -1,9 +1,12 @@
 import React from 'react';
 import { Card, CardGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import useItems from '../../../hooks/useItems';
 import './ItemDetails.css'
 
 const ItemDetails = ({ product, editItem }) => {
+    // for delete ----------
+    const [products, setProducts] = useItems();
 
     //destructure product
     const { _id, img, name, details, price, brandName, supplierName, email, quantity } = product;
@@ -26,25 +29,29 @@ const ItemDetails = ({ product, editItem }) => {
     }
 
 
-    /* //handle delete
-    //gn-car manage service
-    const handleDelete = id => {
+    //handle delete------------
+
+    const handleItemDelete = id => {
+        // console.log(id);
+
         const proceed = window.confirm('Are you sure?');
 
         if (proceed) {
-            const url = `https://shielded-forest-30864.herokuapp.com/service/${id}`;
+            const url = `http://localhost:5000/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
-                    const remaining = services.filter(service => service._id !== id);
-                    setServices(remaining);
+
+                    // console.log(data);
+
+                    const remaining = products.filter(product => product._id !== id);
+                    setProducts(remaining);
                 })
         }
 
-    } */
+    }
 
 
 
@@ -56,7 +63,7 @@ const ItemDetails = ({ product, editItem }) => {
     else {
         itemsButtons = < >
             <button className='btn btn-success me-4'>Edit item</button>
-            <button className='btn btn-danger'>Delete Item </button>
+            <button onClick={() => handleItemDelete(_id)} className='btn btn-danger'>Delete Item </button>
         </>
     }
 

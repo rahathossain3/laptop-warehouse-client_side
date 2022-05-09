@@ -40,7 +40,7 @@ const EditItem = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log('success', data);
-                alert('users added successfully!!!');
+                alert('Item added successfully!!!');
                 event.target.reset();
             })
     }

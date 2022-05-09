@@ -31,20 +31,25 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
+
                             {/* when have user */}
-                            {/*  {user ?
+                            {user ?
                                 <>
                                     <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
                                     <Nav.Link as={Link} to="/addanitem" className='header-links'>Add Item</Nav.Link>
-
+                                    <Nav.Link as={Link} to="/myitems" className='header-links'>My Items</Nav.Link>
                                 </>
                                 :
-                                <></>
-                            } */}
+                                <>
+                                    <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Inventories</Nav.Link>
+                                </>
+                            }
 
-                            <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
+                            {/*
+                             <Nav.Link as={Link} to="/manageitems" className='header-links'>Manage Items</Nav.Link>
                             <Nav.Link as={Link} to="/addanitem" className='header-links'>Add Item</Nav.Link>
-                            <Nav.Link as={Link} to="/myitems" className='header-links'>My Items</Nav.Link>
+                            <Nav.Link as={Link} to="/myitems" className='header-links'>My Items</Nav.Link> 
+                            */}
 
 
                             <Nav.Link as={Link} to="/blogs" className='header-links'>Blogs</Nav.Link>
@@ -56,13 +61,6 @@ const Header = () => {
                             {
                                 user ?
                                     <>
-                                        {/* <NavDropdown title="Manage product" id="collasible-nav-dropdown">
-                                            <NavDropdown.Item href="#action/3.1" >Manage Items</NavDropdown.Item>
-                                            <NavDropdown.Item href="#action/3.2">Add Item</NavDropdown.Item>
-
-                                            <NavDropdown.Divider />
-                                            <NavDropdown.Item href="#action/3.4">My Items</NavDropdown.Item>
-                                        </NavDropdown> */}
 
                                         <Nav.Link as={Link} to="#userProfile" className='header-links'>
                                             <span>{user?.displayName}</span>

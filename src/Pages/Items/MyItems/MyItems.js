@@ -39,7 +39,9 @@ const MyItems = () => {
 
     return (
         <div className='container mx-auto'>
-            <h2>Your Items: {products.length} </h2>
+            <h2 className='title text-center'> My Item</h2>
+            <hr />
+            <h3 className=' text-success text-center'>My selected Item Is: {products.length} Items </h3>
 
             <div className='item-cart'>
 

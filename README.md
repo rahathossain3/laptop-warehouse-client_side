@@ -22,6 +22,8 @@
     * react-router
     * react-toastify
     * react fontawesome
+    * react form
+    * react axios
     * 
 
 
@@ -47,9 +49,13 @@
 * individual item route
 * mongodb data server
 * axios & react-from using
-*
-*
-*
+* custom data add 
+* data delete
+* Selected data update
+* user wise data select
+* user find own item data that he add
+* selected item Stock update & with error handle
+* selected item delivery 
 
 ## stackoverflow qus
 https://stackoverflow.com/questions/72112190/react-devtools-backend-js3973-warning-cannot-update-a-component-browserroute

@@ -55,25 +55,25 @@ const EditItem = () => {
 
 
                 <label className='field-name' for="name">Item Name</label>
-                <input className='mb-2 ' id='name' name="name" placeholder='Item Name' />
+                <input className='mb-2 ' id='name' name="name" placeholder='Item Name' required />
 
                 <label className='field-name' for="details">Item Details</label>
-                <textarea className='mb-2 ' id='details' name="details" placeholder='Item Details' />
+                <textarea className='mb-2 ' id='details' name="details" placeholder='Item Details' required />
 
                 <label className='field-name' for="price">Item Price</label>
-                <input className='mb-2 ' id='price' name="price" placeholder=' Item Price $' type="number" />
+                <input className='mb-2 ' id='price' name="price" placeholder=' Item Price $' type="number" required />
 
                 <label className='field-name' for="supplierName">Supplier Name</label>
-                <input className='mb-2 ' value={user.displayName} id='supplierName' name="supplierName" placeholder='Supplier Name' />
+                <input className='mb-2 ' value={user.displayName} id='supplierName' name="supplierName" placeholder='Supplier Name' required />
 
                 <label className='field-name' for="email">Supplier Email</label>
                 <input className='mb-2 ' id='email' value={user.email} name="email" placeholder='Supplier Email' type="email" required />
 
                 <label className='field-name' for="quantity">Item Quantity</label>
-                <input className='mb-2 ' id='quantity' name="quantity" placeholder='Item Quantity' type="number" />
+                <input className='mb-2 ' id='quantity' name="quantity" placeholder='Item Quantity' type="number" required />
 
                 <label className='field-name' for="img">Item Image</label>
-                <input className='mb-2 ' id='img' name="img" placeholder='Item Photo URL' type="Text" />
+                <input className='mb-2 ' id='img' name="img" placeholder='Item Photo URL' type="Text" required />
 
 
                 <input className='btn btn-primary w-50 mx-auto mt-2' type='submit' value="Update Item" />

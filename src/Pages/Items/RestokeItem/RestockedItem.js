@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ListGroupItem } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useItemDetail from '../../../hooks/useItemDetails';
-import useItems from '../../../hooks/useItems';
 import './RestockedItem.css';
 
 const RestockedItem = () => {
-    // for quantity
-    // let [plusQuantity, setPlusQuantity] = useState(0);
-    //input quantity data
+
     let [restock, setRestock] = useState('');
 
 
@@ -17,12 +14,13 @@ const RestockedItem = () => {
     const [product] = useItemDetail(itemId);
 
     //destructure product
-    const { img, name, details, price, brandName, supplierName, email, quantity } = product;
+    let { img, name, details, price, brandName, supplierName, email, quantity } = product;
 
     // for quantity 
     let finalQuantity;
-    if (quantity <= 0) {
+    if (quantity <= 0 || quantity === 'null') {
         finalQuantity = <span className='item-tag text-danger'>Sold Out</span>
+        quantity = 0;//----------
     }
     else {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>
@@ -33,18 +31,19 @@ const RestockedItem = () => {
         setRestock(event.target.value);
     }
 
-    // for update quantity
+    //for refreshPage
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
+    // for update quantity--ok
     const oldQuantity = parseInt(product.quantity);
     //set qut
     let newQuantity = oldQuantity + parseInt(restock);
 
-    useEffect(() => {
-        console.log(product)
-    }, [product])
-    const handleRestockedItems = event => {
 
-        // let newQuantity = parseInt(quantity);
-        // console.log(newQuantity);
+
+    const handleRestockedItems = event => {
 
         // set new quantity
         const quantity = newQuantity;
@@ -65,12 +64,13 @@ const RestockedItem = () => {
             .then(res => res.json())
             .then(data => {
                 // console.log('success', data);
-                alert('users added successfully!!!');
+                alert('Quantity added successfully!!!');
 
                 // setRestock(0);
                 // setPlusQuantity = parseInt(product.quantity);
             })
-
+        // console.log('quantity', quantity);
+        refreshPage();
 
     }
 
@@ -83,7 +83,7 @@ const RestockedItem = () => {
     return (
         <div className='container text-center mt-4'>
             <h2 className='title m-3'>Update Your Product Stocks</h2>
-            <div className='restacked-item'>
+            <div className='restacked-item mb-5 pb-2'>
                 <div className='stock-img'>
                     <img src={img} alt="" />
                 </div>
@@ -124,7 +124,7 @@ const RestockedItem = () => {
 
 
                             <button onClick={handleRestockedItems} className='btn btn-success me-2 m-2 rounded-2 re-stock'>Re Stock</button>
-                            <input onBlur={handleRestock} type="text" name="restock" id="" placeholder='Re-Stock Quantity' />
+                            <input onChange={handleRestock} type="number" name="restock" id="" placeholder='Re-Stock Quantity' />
 
                         </>
                     </div>

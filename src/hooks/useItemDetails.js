@@ -12,6 +12,6 @@ const useItemDetail = itemId => {
             .then(data => setProduct(data));
 
     }, [itemId]);
-    return [product]
+    return [product, setProduct]
 }
 export default useItemDetail;

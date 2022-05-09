@@ -6,7 +6,7 @@ import './RestockedItem.css';
 
 const RestockedItem = () => {
 
-    let [restock, setRestock] = useState('');
+    let [restock, setRestock] = useState('0');
 
 
     const { itemId } = useParams();
@@ -20,7 +20,7 @@ const RestockedItem = () => {
     let finalQuantity;
     if (quantity <= 0 || quantity === 'null') {
         finalQuantity = <span className='item-tag text-danger'>Sold Out</span>
-        quantity = 0;//----------
+        product.quantity = 0;//----------
     }
     else {
         finalQuantity = <span className='item-tag text-success'>{quantity}</span>

@@ -1,8 +1,16 @@
 import { Carousel } from 'react-bootstrap';
 import './Banner.css'
-
+import Loading from '../../Shared/Loading/Loading';
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Banner = () => {
+    const [loading] = useAuthState(auth)
+    // for loading----
+    if (loading) {
+        <Loading></Loading>
+    }
+
 
     return (
 

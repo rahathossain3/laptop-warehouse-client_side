@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react';
 import useItems from '../../../hooks/useItems';
 import ItemDetails from '../../Items/ItemDetails/ItemDetails';
 import Banner from '../Banner/Banner';
+import Loading from '../../Shared/Loading/Loading';
+import auth from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Home = () => {
 
+    const [loading] = useAuthState(auth)
     // for items
     const [products] = useItems([]);
 
-
+    // for loading----
+    if (loading) {
+        <Loading></Loading>
+    }
 
 
     return (

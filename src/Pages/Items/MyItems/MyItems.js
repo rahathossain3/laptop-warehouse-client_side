@@ -4,10 +4,16 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import axios from 'axios';
 import ItemDetails from '../ItemDetails/ItemDetails';
+import Loading from '../../Shared/Loading/Loading';
 
 const MyItems = () => {
-    const [user] = useAuthState(auth)
+    const [user, loading] = useAuthState(auth)
     const [products, setProducts] = useState([]);
+
+    // for loading----
+    if (loading) {
+        <Loading></Loading>
+    }
 
     //for unauthorize user
     // const navigate = useNavigate();

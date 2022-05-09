@@ -24,7 +24,7 @@ const MyItems = () => {
             //user wish product
             const email = user.email;
 
-            const url = `http://localhost:5000/item?email=${email}`;
+            const url = `https://lit-harbor-38143.herokuapp.com/item?email=${email}`;
             const { data } = await axios.get(url);
             setProducts(data);
 

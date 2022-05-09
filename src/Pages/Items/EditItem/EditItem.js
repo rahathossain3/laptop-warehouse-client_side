@@ -28,7 +28,7 @@ const EditItem = () => {
         const updateItem = { img, name, details, price, supplierName, email, quantity };
 
         // send data to the server
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://lit-harbor-38143.herokuapp.com/item/${itemId}`;
         // console.log(url);
         fetch(url, {
             method: 'PUT',

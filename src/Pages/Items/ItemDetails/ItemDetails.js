@@ -38,7 +38,7 @@ const ItemDetails = ({ product, editItem }) => {
         const proceed = window.confirm(`Do you want delete ${name}  this Item?`);
 
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://lit-harbor-38143.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

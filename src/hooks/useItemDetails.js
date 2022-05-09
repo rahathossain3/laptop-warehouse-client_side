@@ -5,7 +5,7 @@ const useItemDetail = itemId => {
 
     useEffect(() => {
         //get single item url
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://lit-harbor-38143.herokuapp.com/item/${itemId}`;
 
         fetch(url)
             .then(res => res.json())

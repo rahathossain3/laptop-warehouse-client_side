@@ -1,0 +1,44 @@
+.require-auth-style img {
+    width: 200px;
+}
+
+.verify-btn {
+    font-size: 28px;
+    padding: 10px;
+}
+
+
+
+/* ---------- for mobile- -------------- max-width: 768px------ */
+
+@media screen and (max-width: 768px) {
+
+
+    .require-auth-style {
+        margin-top: 50px;
+    }
+
+    .verify-btn {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+
+}
+
+
+
+/* ---------- for tablet- -------------- max-width: 991px------ */
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .require-auth-style {
+        margin-top: 50px;
+    }
+
+    .verify-btn {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+}

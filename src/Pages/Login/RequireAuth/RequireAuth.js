@@ -4,6 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import './RequireAuth.css'
 
 const RequireAuth = ({ children }) => {
     // for user and loading
@@ -26,16 +27,17 @@ const RequireAuth = ({ children }) => {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
 
-
+    const imgUrl = `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Antu_dialog-warning.svg/512px-Antu_dialog-warning.svg.png?20160706101740`;
 
     // if user no verify email
     if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
-        return <div className='text-center mt-5'>
-            <h3 className=' text-danger'> Your Email is Not Verified....!</h3>
-            <h5 className=' text-success'> Please Verify Your Email Address First </h5>
+        return <div className='p-2 text-center require-auth-style mt-5 mb-5'>
+            <img src={imgUrl} alt="" />
+            <h3 className=' text-danger mb-2'> Your Email is Not Verified....!</h3>
+            <h5 className=' text-success mb-3'> Please Verify Your Email Address First </h5>
 
             <button
-                className='btn btn-primary'
+                className='btn btn-primary mb-5 verify-btn'
                 onClick={async () => {
                     await sendEmailVerification();
                     toast('Verify Email Send');

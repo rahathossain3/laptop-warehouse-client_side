@@ -36,18 +36,18 @@ const RestockedItem = () => {
         window.location.reload(false);
     }
 
-    // for update quantity--ok
+    // for get quantity--ok
     const oldQuantity = parseInt(product.quantity);
-    //set qut
-    let newQuantity = oldQuantity + parseInt(restock);
 
 
-
+    // restock item quantity------------------
     const handleRestockedItems = event => {
+        //set qut
+        let newQuantity = oldQuantity + parseInt(restock);
 
         // set new quantity
         const quantity = newQuantity;
-        console.log(quantity);
+        // console.log(quantity);
 
         const updateItem = { quantity };
 
@@ -66,15 +66,43 @@ const RestockedItem = () => {
                 // console.log('success', data);
                 alert('Quantity added successfully!!!');
 
-                // setRestock(0);
-                // setPlusQuantity = parseInt(product.quantity);
             })
         // console.log('quantity', quantity);
         refreshPage();
 
     }
 
+    //for reduces quantity-------------------
+    const handleReducesQuantity = event => {
+        //set qut
+        let newQuantity = oldQuantity - 1;
 
+        // set new quantity
+        const quantity = newQuantity;
+        // console.log(quantity);
+
+        const updateItem = { quantity };
+
+        // send data to the server
+        const url = `http://localhost:5000/item/${itemId}`;
+        // console.log(url);
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateItem)
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                alert('Quantity Reduces successfully!!!');
+
+            })
+        // console.log('quantity', quantity);
+        refreshPage();
+
+    }
 
 
 
@@ -118,7 +146,7 @@ const RestockedItem = () => {
 
                     </div>
                     <div className='stock-btn d-block  text-center px-5 mt-5'>
-                        <button className='btn btn-warning me-2 m-2 rounded-2 delivery'>Delivery</button>
+                        <button onClick={handleReducesQuantity} className='btn btn-warning me-2 m-2 rounded-2 delivery'>Delivery</button>
 
                         <>
 

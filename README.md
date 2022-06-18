@@ -1,12 +1,11 @@
 ## Laptop Warehouse
 - - - -
+
 ### Live Webside  link
 
-[Live side] (https://pixel-camera-c8298.web.app/)
+[Live side] (https://laptop-warehouse-aad91.web.app/)
    
-   
-
-
+  
 - - - -
 ### client side git repo link
 
@@ -15,11 +14,14 @@
     https://github.com/rahathossain3/laptop-warehouse-client_side
 
 - - - - 
-[Server side] (https://github.com/rahathossain3/pixel-camera-server_side)
+### Server side git repo link
+
+[Server side] (https://github.com/rahathossain3/laptop-warehouse-server_side)
    
-    https://github.com/rahathossain3/pixel-camera-server_side
+   https://github.com/rahathossain3/laptop-warehouse-server_side
 
 - - - -
+
 ### Using related file
 
 #### Client side

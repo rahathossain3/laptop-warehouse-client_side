@@ -4,14 +4,14 @@
 - - - -
 ### client side git repo link
 
-[Client side] (https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-rahathossain3)
+[Client side] (https://github.com/rahathossain3/laptop-warehouse-client_side)
    
-    https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-rahathossain3
+    https://github.com/rahathossain3/laptop-warehouse-client_side
 
 - - - - 
-[Server side] (https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-rahathossain3)
+[Server side] (https://github.com/rahathossain3/pixel-camera-server_side)
    
-    https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-rahathossain3
+    https://github.com/rahathossain3/pixel-camera-server_side
 
 - - - -
 ### Using related file
